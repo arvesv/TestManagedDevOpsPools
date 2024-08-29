@@ -4,7 +4,7 @@ trigger:
 pool:
   name: MPool
   demands:
-  - ImageOverride windows-2022
+  - ImageOverride -equals windows-2022
 
 
 steps:
