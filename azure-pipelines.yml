@@ -6,8 +6,8 @@ pool:
   demands:
   - ImageOverride -equals windows-2022
 
-steps:
 
+steps:
 - script: dotnet restore
   displayName: 'Restore dependencies'
 
