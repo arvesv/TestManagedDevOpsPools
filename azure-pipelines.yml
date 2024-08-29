@@ -1,12 +1,6 @@
 trigger:
 - main
 
-pool:
-  name: MPool
-  demands:
-  - ImageOverride -equals windows-2022
-
-
 strategy:
   matrix:
     linux:
@@ -15,7 +9,10 @@ strategy:
       vmImage: 'windows-2022'
 
 
-
+pool:
+  name: MPool
+  demands:
+  - ImageOverride -equals $(vmImage)
 
 steps:
 - script: dotnet restore
