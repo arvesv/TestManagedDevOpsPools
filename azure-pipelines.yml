@@ -7,6 +7,16 @@ pool:
   - ImageOverride -equals windows-2022
 
 
+strategy:
+  matrix:
+    linux:
+      vmImage: 'ubuntu-latest'
+    windows:
+      vmImage: 'windows-2022'
+
+
+
+
 steps:
 - script: dotnet restore
   displayName: 'Restore dependencies'
