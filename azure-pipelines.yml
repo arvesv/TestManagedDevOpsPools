@@ -15,9 +15,12 @@ pool:
   - ImageOverride -equals $(vmImage)
 
 steps:
-- task: DotNetCoreCLI@2
+- task: UseDotNet@
   inputs:
-    command: 'restore'
+    version: '8.x'
+
+- script: dotnet restore
+  displayName: 'Restore project'
 
 - script: dotnet build --configuration Release
   displayName: 'Build project'
