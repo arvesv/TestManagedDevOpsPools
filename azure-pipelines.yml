@@ -6,7 +6,11 @@
 trigger:
 - main
 
-pool: MPool
+pool:
+  name: MPool
+  demands:
+  - image-override: windows-2022
+
 
 steps:
 - script: echo Hello, world!
